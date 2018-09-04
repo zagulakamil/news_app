@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="powered_by" translatable="false">- NewsAPI.org</string>
+    <string name="api_key" translatable="false">ade15399a6da48e9b63a5b8083ca655a</string>
+    <string name="api_base_url" translatable="false">https://newsapi.org/v2/</string>
+
+    <!-- Menu -->
+    <string name="news">Wiadomości</string>
+    <string name="favorite">Ulubione</string>
+    <string name="sources">Źródła</string>
+</resources>

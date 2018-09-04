@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/news"
+        android:icon="@drawable/ic_newspaper"
+        android:title="@string/news"/>
+
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/ic_baseline_favorite_24px"
+        android:title="@string/favorite"/>
+
+    <item
+        android:id="@+id/sources"
+        android:icon="@drawable/ic_baseline_category_24px"
+        android:title="@string/sources"/>
+</menu>
