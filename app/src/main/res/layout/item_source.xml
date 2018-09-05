@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="item"
+            type="com.kamilzagula.newsapp.data.model.Source"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:padding="@dimen/margin_m"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/name"
+            android:textStyle="bold"
+            android:text="@{item.name}"
+            tools:text="Ary News"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/description"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@{item.description}"
+            tools:text="Description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/url"
+            android:text="@{item.url}"
+            tools:text="http://www.onet.pl"
+            android:autoLink="web"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

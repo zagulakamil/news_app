@@ -35,6 +35,13 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+    // leak canary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+
+    // Paging component
+    implementation "android.arch.paging:runtime:1.0.1"
+
     // ConstraintLayout
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 

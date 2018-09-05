@@ -5,7 +5,9 @@
     <string name="api_base_url" translatable="false">https://newsapi.org/v2/</string>
 
     <!-- Menu -->
-    <string name="news">Wiadomości</string>
-    <string name="favorite">Ulubione</string>
-    <string name="sources">Źródła</string>
+    <string name="news">News</string>
+    <string name="favorite">Favorite</string>
+    <string name="sources">Sources</string>
+
+    <string name="download_error">Hmm something went wrong, try again in a few seconds</string>
 </resources>
