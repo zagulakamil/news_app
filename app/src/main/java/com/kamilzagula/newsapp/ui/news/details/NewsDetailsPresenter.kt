@@ -71,7 +71,8 @@ class NewsDetailsPresenter(
                             NewsEntity(title = it.title,
                                     description = it.description,
                                     url = it.url,
-                                    urlToImage = it.urlToImage)
+                                    urlToImage = it.urlToImage,
+                                    publishedAt = it.publishedAt)
                         }.doOnSuccess {
                             newsDao.remove(it)
                         })
@@ -90,7 +91,8 @@ class NewsDetailsPresenter(
                             NewsEntity(title = it.title,
                                     description = it.description,
                                     url = it.url,
-                                    urlToImage = it.urlToImage)
+                                    urlToImage = it.urlToImage,
+                                    publishedAt = it.publishedAt)
                         }.doOnSuccess {
                             newsDao.insert(it)
                         })

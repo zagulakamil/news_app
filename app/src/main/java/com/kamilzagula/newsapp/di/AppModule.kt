@@ -9,6 +9,9 @@ import com.kamilzagula.newsapp.data.local.NewsDao
 import com.kamilzagula.newsapp.data.network.NewsRepository
 import com.kamilzagula.newsapp.data.network.RetrofitFactory
 import com.kamilzagula.newsapp.data.network.SourcesRepository
+import com.kamilzagula.newsapp.ui.favorites.FavoritesAdapter
+import com.kamilzagula.newsapp.ui.favorites.FavoritesContract
+import com.kamilzagula.newsapp.ui.favorites.FavoritesPresenter
 import com.kamilzagula.newsapp.ui.news.NewsAdapter
 import com.kamilzagula.newsapp.ui.news.details.NewsDetailsContract
 import com.kamilzagula.newsapp.ui.news.details.NewsDetailsPresenter
@@ -37,6 +40,7 @@ fun appModule(app: App) = applicationContext {
     factory { ExecutorFactory() }
     factory { NewsDataSource(get(), CommonSettings.PAGE_SIZE, get()) }
     factory { NewsAdapter() }
+    factory { FavoritesAdapter() }
 }
 
 val repositoriesModule = applicationContext {
@@ -47,6 +51,7 @@ val repositoriesModule = applicationContext {
 val presentersModule = applicationContext {
     factory { SourcesPresenter(get(), get()) as SourcesContract.Presenter }
     factory { NewsDetailsPresenter(get(), get()) as NewsDetailsContract.Presenter }
+    factory { FavoritesPresenter(get(), get()) as FavoritesContract.Presenter }
 }
 
 internal fun provideNewsDao(appDatabase: AppDatabase): NewsDao {

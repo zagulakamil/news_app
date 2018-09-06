@@ -16,7 +16,7 @@ data class News(@Json(name = "publishedAt")
                 @Json(name = "description")
                    val description: String = "",
                 @Json(name = "source")
-                   val source: Source,
+                   val source: Source?,
                 @Json(name = "title")
                    val title: String = "",
                 @Json(name = "url")
