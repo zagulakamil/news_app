@@ -10,4 +10,7 @@
     <string name="sources">Sources</string>
 
     <string name="download_error">Hmm something went wrong, try again in a few seconds</string>
+
+    <string name="news_added_to_favorites">News added to favorites</string>
+    <string name="news_removed_from_favorites">News removed from favorites</string>
 </resources>

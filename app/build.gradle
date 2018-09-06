@@ -28,12 +28,19 @@ android {
     }
 }
 
+androidExtensions {
+    experimental = true
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // Stetho
+    implementation 'com.facebook.stetho:stetho:1.5.0'
 
     // leak canary
     debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1'
@@ -63,6 +70,7 @@ dependencies {
 
     // Retrofit2
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
 
     // Retrofit2 RX adapter
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
@@ -71,5 +79,13 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-moshi:2.4.0'
     implementation 'com.squareup.moshi:moshi-kotlin:1.6.0'
 
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
+    // Room database
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    kapt "android.arch.persistence.room:compiler:1.1.1"
+
+    // RxJava support for Room
+    implementation "android.arch.persistence.room:rxjava2:1.1.1"
 }

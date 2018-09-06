@@ -1,6 +1,7 @@
 package com.kamilzagula.newsapp
 
 import android.app.Application
+import com.facebook.stetho.Stetho
 import com.github.bskierys.pine.Pine
 import com.kamilzagula.newsapp.di.appModules
 import com.squareup.leakcanary.LeakCanary
@@ -19,6 +20,7 @@ class App : Application() {
 
         if (BuildConfig.DEBUG) {
             initializeTimber()
+            Stetho.initializeWithDefaults(this)
         }
     }
 

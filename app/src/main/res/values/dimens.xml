@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="margin_s">4dp</dimen>
     <dimen name="margin_m">8dp</dimen>
     <dimen name="margin_l">16dp</dimen>
+    <dimen name="margin_xl">20dp</dimen>
+    <dimen name="margin_xll">32dp</dimen>
+
+    <dimen name="news_item_size">88dp</dimen>
+    <dimen name="news_item_img_width">100dp</dimen>
+    <dimen name="news_item_img_height">56dp</dimen>
+
+    <dimen name="news_img_height">180dp</dimen>
 </resources>

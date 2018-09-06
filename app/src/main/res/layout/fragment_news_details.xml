@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/news_img_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/addToFavorite"
+                android:src="@drawable/ic_baseline_favorite_24px"
+                android:layout_marginEnd="@dimen/margin_l"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img"
+                app:layout_constraintBottom_toBottomOf="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/margin_m"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:textStyle="bold"
+                tools:text="Title"
+                android:layout_marginTop="@dimen/margin_xll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_marginTop="@dimen/margin_m"
+                android:layout_marginStart="@dimen/margin_m"
+                android:layout_marginEnd="@dimen/margin_m"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                android:layout_width="0dp"
+                tools:text="Description"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/url"
+                android:autoLink="web"
+                android:layout_margin="@dimen/margin_m"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="http://onet.pl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</layout>
